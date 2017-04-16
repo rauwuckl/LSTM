@@ -63,7 +63,7 @@ class DataHandle:
             dataLength[indx] = len(groundData[i]['text'])
             data.append(groundData[i]['text'])
             label.append(groundData[i]['label'])
-        print("dataLengths: {}".format(dataLength))
+        #print("dataLengths: {}".format(dataLength))
         maxLen = np.max(dataLength)
 
         #make matrix batchSize x maxLen filled with the filler id, chop it up later
@@ -80,7 +80,7 @@ class DataHandle:
         splitIndices = range(seqLength, totalLength, seqLength)
         listOfSubMatrices = np.split(matrix, splitIndices, axis=1)
         del listOfSubMatrices[-1]
-        return listOfSubMatrices[:10]
+        return listOfSubMatrices#[:10] #TODO only returns the first 10 now
 
 
 
