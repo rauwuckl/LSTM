@@ -3,3 +3,6 @@ saves/
 summary/
 data/
 *.pickle
+
+.idea/
+.ipynb_checkpoints/

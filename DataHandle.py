@@ -32,7 +32,8 @@ class DataHandle:
         return len(self.id2word)
 
     def countLabels(self, data):
-        Counter([w['label'] for w in data])
+        counter = Counter([w['label'] for w in data])
+        print(counter)
 
 
     def epoch(self, batchSize, seqLength, testData=False):
@@ -82,5 +83,4 @@ class DataHandle:
         return listOfSubMatrices[:10]
 
 
-    def getSequences(self, seqLength, maxLength):
-        pass
+
